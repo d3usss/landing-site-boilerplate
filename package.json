@@ -25,6 +25,7 @@
   "devDependencies": {
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "prettier": "2.2.1",
@@ -34,15 +35,12 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "lint-fix"
+      "pre-push": "npm run lint-fix"
     }
   },
   "lint-staged": {
     "*.js": [
       "prettier --write"
     ]
-  },
-  "lint-fix": {
-    "*.js": ["eslint --fix 'src/*.js'"]
   }
 }
