@@ -4,7 +4,8 @@
   "description": "Bootstrap files and setup for landing-pages and small websites",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "format": "prettier --write 'src/*.{js,css}'"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,21 @@
   },
   "homepage": "https://github.com/d3usss/landing-site-bootstrap#readme",
   "devDependencies": {
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "2.2.1",
     "webpack": "^5.11.0",
     "webpack-nano": "^1.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
