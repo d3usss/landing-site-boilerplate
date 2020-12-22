@@ -41,5 +41,8 @@
     "*.js": [
       "prettier --write"
     ]
+  },
+  "lint-fix": {
+    "*.js": ["eslint --fix 'src/*.js'"]
   }
 }
