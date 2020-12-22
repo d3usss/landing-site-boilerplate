@@ -1,0 +1,23 @@
+{
+  "name": "landing-site-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap files and setup for landing-pages and small websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3usss/landing-site-bootstrap.git"
+  },
+  "keywords": [
+    "langing-page",
+    "boostrap"
+  ],
+  "author": "Łukasz \"d3usss\" Migut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d3usss/landing-site-bootstrap/issues"
+  },
+  "homepage": "https://github.com/d3usss/landing-site-bootstrap#readme"
+}
