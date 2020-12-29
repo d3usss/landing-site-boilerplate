@@ -1,3 +1,5 @@
+import './assets/js/module';
+
 import './favicon.ico';
 import './humans.txt';
 import './robots.txt';

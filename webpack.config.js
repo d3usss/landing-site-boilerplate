@@ -8,7 +8,8 @@ const commonConfig = merge([
   {
     entry: ['./src'],
     output: {
-      filename: 'main.js',
+      filename: 'js/[name]-[chunkhash].js',
+      sourceMapFilename: 'sourceMap/[file].map',
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
@@ -19,6 +20,7 @@ const commonConfig = merge([
       }),
       new CleanWebpackPlugin(),
     ],
+    devtool: 'cheap-source-map',
   },
   parts.loadCSS(),
   parts.loadStaticFiles(),
