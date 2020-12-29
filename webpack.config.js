@@ -22,6 +22,7 @@ const commonConfig = merge([
   },
   parts.loadCSS(),
   parts.loadStaticFiles(),
+  parts.babelLoader(),
 ]);
 
 const productionConfig = merge([]);

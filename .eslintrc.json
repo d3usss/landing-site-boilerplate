@@ -1,9 +1,4 @@
 {
-  "ecmaFeatures": {
-      "modules": true,
-      "spread" : true,
-      "restParams" : true
-  },
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "env" : {
       "browser" : true,
