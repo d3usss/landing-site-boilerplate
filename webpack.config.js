@@ -2,7 +2,12 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const parts = require('./wepack.parts');
+const {
+  loadCSS,
+  loadStaticFiles,
+  babelLoader,
+  devServer,
+} = require('./wepack.parts');
 
 const commonConfig = merge([
   {
@@ -22,14 +27,14 @@ const commonConfig = merge([
     ],
     devtool: 'cheap-source-map',
   },
-  parts.loadCSS(),
-  parts.loadStaticFiles(),
-  parts.babelLoader(),
+  loadCSS(),
+  loadStaticFiles(),
+  babelLoader(),
 ]);
 
 const productionConfig = merge([]);
 
-const developmentConfig = merge([{ mode: 'development' }, parts.devServer()]);
+const developmentConfig = merge([{ mode: 'development' }, devServer()]);
 
 module.exports = (env, argv) => {
   const { mode } = argv;
